@@ -8,12 +8,12 @@
 </marketplace>
 <payload>
 <account>
-<accountIdentifier>dummy-account</accountIdentifier>
-<status>SUSPENDED</status>
+<accountIdentifier><%= @accountIdentifier %></accountIdentifier>
+<status><%= @accountStatus %></status>
 </account>
 <configuration/>
 <notice>
-<type>DEACTIVATED</type>
+<type><%= @noticeType %></type>
 </notice>
 </payload>
 <type>SUBSCRIPTION_NOTICE</type>
