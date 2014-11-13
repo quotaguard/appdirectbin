@@ -11,6 +11,12 @@ Currently supports
 * SUBSCRIPTION_CANCEL:  <http://appdirectbin.herokuapp.com/subscriptions/cancel.xml>
 * SUBSCRIPTION_NOTICE:  <http://appdirectbin.herokuapp.com/subscriptions/notice.xml>
 
+* ADDON_ORDER:  <http://appdirectbin.herokuapp.com/addons/order.xml>
+* ADDON_BIND:  <http://appdirectbin.herokuapp.com/addons/bind.xml>
+* ADDON_UNBIND:  <http://appdirectbin.herokuapp.com/addons/unbind.xml>
+* ADDON_CANCEL:  <http://appdirectbin.herokuapp.com/addons/cancel.xml>
+
+
 As part of your AppDirect setup you register endpoint URLs that AppDirect will call when a subscription event occurs.
 
     https://example.com/create?url={eventUrl}
@@ -33,10 +39,13 @@ We created this for our own testing so it hasn't been extensively road tested or
 ### Supported Variables
  URL Param  | AppDirect XML Tag | Example URL 
 :-----------|:------------|:------------:
- email      |``<creator><email>`` | <http://appdirectbin.herokuapp.com/subscriptions/order.xml?email=john@example.com> |     
- editionCode|``<payload><order><editionCode>`` |<http://appdirectbin.herokuapp.com/subscriptions/order.xml?editionCode=PREMIUM> |    
  accountIdentifier |``<payload><account><accountIdentifier>`` | <http://appdirectbin.herokuapp.com/subscriptions/change.xml?accountIdentifier=myusername101> |     
- accountStatus  |``<payload><account><accountStatus>`` | <http://appdirectbin.herokuapp.com/subscriptions/notice.xml?accountStatus=FREE_TRIAL_EXPIRED> |      
+ accountStatus  |``<payload><account><accountStatus>`` | <http://appdirectbin.herokuapp.com/subscriptions/notice.xml?accountStatus=FREE_TRIAL_EXPIRED> |  
+ addonBindingId  |``<payload><addonBinding><id>`` | <http://appdirectbin.herokuapp.com/addons/unbind.xml?addonBindingId=dummybinding-id> |   
+ addonInstanceId  |``<payload><addonInstance><id>`` | <http://appdirectbin.herokuapp.com/addons/unbind.xml?addonInstanceId=dummyinstance-id> |
+ addonOfferingCode  |``<payload><order><addonOfferingCode>`` | <http://appdirectbin.herokuapp.com/addons/order.xml?addonOfferingCode=type:vendor:plan> |   
+ editionCode|``<payload><order><editionCode>`` |<http://appdirectbin.herokuapp.com/subscriptions/order.xml?editionCode=PREMIUM> |    
+ email      |``<creator><email>`` | <http://appdirectbin.herokuapp.com/subscriptions/order.xml?email=john@example.com> |     
  flag       | ``<flag>``|     <http://appdirectbin.herokuapp.com/subscriptions/order.xml?flag=false> |    
  noticeType |``<payload><notice><type>`` |    <http://appdirectbin.herokuapp.com/subscriptions/change.xml?noticeType=REACTIVATED> | 
 

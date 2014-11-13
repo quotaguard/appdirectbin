@@ -1,1 +1,19 @@
-<h3>Welcome</h3>
+<div class="container">
+<h1>AppDirectBin</h1>
+<p>Provides Sample API responses for the AppDirect Addons and Subscriptions API. Please see <a href="https://github.com/timrwilliams/appdirectbin">GitHub</a> for more details.</p>
+<h2>Addons API</h2>
+<ol>
+<li><%= link_to "ADDON_ORDER", addons_order_path(format: :xml) %></li>
+<li><%= link_to "ADDON_BIND", addons_bind_path(format: :xml) %></li>
+<li><%= link_to "ADDON_UNBIND", addons_unbind_path(format: :xml) %></li>
+<li><%= link_to "ADDON_CANCEL", addons_cancel_path(format: :xml) %></li>
+</ol>
+
+<h2>Subscriptions API</h2>
+<ol>
+<li><%= link_to "SUBSCRIPTION_ORDER",subscriptions_order_path(format: :xml) %></li>
+<li><%= link_to "SUBSCRIPTION_CANCEL", subscriptions_cancel_path(format: :xml) %></li>
+<li><%= link_to "SUBSCRIPTION_CHANGE",subscriptions_change_path(format: :xml) %></li>
+<li><%= link_to "SUBSCRIPTION_NOTICE",subscriptions_notice_path(format: :xml) %></li>
+</ol>
+</div>
