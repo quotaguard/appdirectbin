@@ -1,0 +1,27 @@
+<event>
+    <type>USER_ASSIGNMENT</type>
+    <marketplace>
+        <baseUrl>https://www.acme-marketplace.com</baseUrl>
+        <partner>ACME</partner>
+    </marketplace>
+    <% if @flag != "false" %>
+        <flag><%= @flag %></flag>
+    <% end %>
+    <creator>
+        <email>admin@fakeco</email>
+        <firstName>Alice</firstName>
+        <lastName>Hacker</lastName>
+        <openId>https://www.acme-marketplace.com/openid/id/078e23c3-060f-47b4-b1a3-65c3cb2a283d</openId>
+    </creator>
+    <payload>
+        <account>
+            <accountIdentifier><%= @accountIdentifier %></accountIdentifier>
+        </account>
+        <user>
+            <email><%= @email %></email>
+            <firstName>Bob</firstName>
+            <lastName>Bitdiddle</lastName>
+            <openId><%= @openId %></openId>
+        </user>
+    </payload>
+</event>

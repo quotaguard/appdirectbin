@@ -13,5 +13,6 @@ class ApplicationController < ActionController::Base
     @email = params[:email] || "test-email+creator@appdirect.com"
     @flag = params[:flag] || "STATELESS"
     @noticeType = params[:noticeType] || "DEACTIVATED"
+    @openId = params[:openId] || "https://www.appdirect.com/openid/id/ec5d8eda-5cec-444d-9e30-125b6e4b67e2"
   end
 end

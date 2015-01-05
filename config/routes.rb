@@ -10,5 +10,8 @@ Rails.application.routes.draw do
   get 'subscriptions/notice'
   get 'subscriptions/order'
 
+
+  get 'users/assign'
+  get 'users/unassign'
   root to: 'visitors#index'
 end
